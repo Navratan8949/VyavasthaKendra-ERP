@@ -1,0 +1,6 @@
+{
+  "name": "VyavasthaKendra — Wholesale & Distribution Management",
+  "description": "Premium Wholesale & Distribution ERP system for FMCG distributors. Manage stock, sales orders, purchases, warehouse transfers, payments, and real-time business analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
