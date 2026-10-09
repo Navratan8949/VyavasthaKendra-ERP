@@ -138,8 +138,22 @@ export default function LandingFooter() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
-          <div>
-            © {new Date().getFullYear()} VyavasthaKendra Systems. Enterprise Wholesale & FMCG Distribution OS.
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1 text-center sm:text-left">
+            <span>
+              © {new Date().getFullYear()} VyavasthaKendra Systems. Enterprise Wholesale & FMCG Distribution OS.
+            </span>
+            <span className="hidden sm:inline text-slate-400 dark:text-slate-600">•</span>
+            <span>
+              Designed by{' '}
+              <a
+                href="https://www.codepecharcha.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 underline underline-offset-2 transition-colors"
+              >
+                Code Pe Charcha
+              </a>
+            </span>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/admin" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
