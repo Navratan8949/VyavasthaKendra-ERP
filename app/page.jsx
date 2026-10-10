@@ -19,9 +19,9 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white transition-colors duration-200 overflow-x-hidden max-w-full">
       <LandingNav />
-      <main className="flex-1">
+      <main className="flex-1 overflow-x-hidden">
         <HeroSection />
         <MetricsBar />
         <FeatureShowcase />

@@ -94,26 +94,26 @@ export default function InteractiveSimulator() {
   };
 
   return (
-    <section id="simulator" className="py-24 md:py-32 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="simulator" className="py-16 sm:py-24 md:py-32 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Live Sandbox</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
             Try 60-Second Wholesale Order & Billing.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400">
             Configure a real FMCG wholesale order below. Experience how automatic FEFO batch locks, B2B credit ceiling checks, GST billing, and live gross margins update instantly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Order Configuration Panel */}
-          <div className="lg:col-span-7 bg-slate-50 dark:bg-slate-950/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+          <div className="lg:col-span-7 bg-slate-50 dark:bg-slate-950/80 p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-5 sm:space-y-6">
             
             {/* Step 1: Retailer */}
             <div>
@@ -261,7 +261,7 @@ export default function InteractiveSimulator() {
           </div>
 
           {/* Real-Time B2B Wholesale Invoice Terminal (Dark High Contrast for Realism) */}
-          <div className="lg:col-span-5 bg-gradient-to-b from-slate-950 to-slate-900 text-white p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl relative">
+          <div className="lg:col-span-5 bg-gradient-to-b from-slate-950 to-slate-900 text-white p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-800 shadow-2xl relative">
             <div className="flex items-center justify-between pb-4 border-b border-slate-800">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-blue-400" />
@@ -277,7 +277,7 @@ export default function InteractiveSimulator() {
             <div className="mt-4 text-xs space-y-2.5 font-mono">
               <div className="flex justify-between text-slate-400">
                 <span>Party Name:</span>
-                <span className="text-white font-semibold truncate max-w-[180px]">
+                <span className="text-white font-semibold truncate max-w-[140px] sm:max-w-[180px]">
                   {selectedCustomer?.name || 'Cash Retailer'}
                 </span>
               </div>

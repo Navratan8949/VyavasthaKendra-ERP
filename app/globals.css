@@ -43,6 +43,20 @@
   animation-play-state: paused;
 }
 
+/* Hide scrollbars for touch scroll areas */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 
 @media print {
   body {

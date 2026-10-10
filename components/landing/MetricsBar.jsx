@@ -48,31 +48,33 @@ export default function MetricsBar() {
   ];
 
   return (
-    <section className="border-y border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md py-12 relative overflow-hidden transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="border-y border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md py-8 sm:py-12 relative overflow-hidden transition-colors duration-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {metrics.map((m, idx) => {
             const Icon = m.icon;
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-xs"
+                className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-xs flex flex-col justify-between"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <div className={`p-2.5 rounded-xl border ${m.color}`}>
-                    <Icon className="w-5 h-5" />
+                <div>
+                  <div className="flex items-center justify-between mb-2.5 sm:mb-3">
+                    <div className={`p-2 sm:p-2.5 rounded-lg sm:rounded-xl border ${m.color}`}>
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+                    <span className="px-1.5 sm:px-2.5 py-0.5 rounded-full text-[9px] sm:text-[11px] font-bold bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 text-right truncate">
+                      {m.badge}
+                    </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
-                    {m.badge}
-                  </span>
+                  <div className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+                    {m.value}
+                  </div>
+                  <div className="mt-1 font-bold text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-snug">
+                    {m.label}
+                  </div>
                 </div>
-                <div className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-                  {m.value}
-                </div>
-                <div className="mt-1 font-bold text-sm text-slate-800 dark:text-slate-200">
-                  {m.label}
-                </div>
-                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">
+                <p className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-normal">
                   {m.subtext}
                 </p>
               </div>

@@ -43,26 +43,21 @@ export default function HeroSection() {
   const [creditAlertTriggered, setCreditAlertTriggered] = useState(false);
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/50 via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white transition-colors duration-200">
-      {/* Smooth Ambient Light Accents (NO grid lines, NO row-column patterns) */}
-      {/* <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-blue-500/10 via-indigo-500/10 to-emerald-500/5 blur-3xl pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-600/5 blur-3xl pointer-events-none rounded-full" />
-      <div className="absolute top-20 right-10 w-96 h-96 bg-indigo-600/5 blur-3xl pointer-events-none rounded-full" /> */}
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/50 via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white transition-colors duration-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Eyebrow Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-xs font-semibold mb-6 backdrop-blur-md"
+            className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 backdrop-blur-md max-w-full"
           >
-            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-            <span className="text-slate-800 dark:text-slate-200 font-medium">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
+            <span className="text-slate-800 dark:text-slate-200 font-medium text-center">
               🇮🇳 भारत का सबसे भरोसेमंद FMCG Wholesale ERP
             </span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30">
+            <span className="px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30 shrink-0">
               v2.4 Live
             </span>
           </motion.div>
@@ -72,10 +67,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.05 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-slate-900 dark:text-white"
+            className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.14] sm:leading-[1.08] text-slate-900 dark:text-white"
           >
             गोदाम से काउंटर तक,{" "}
-            <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 dark:from-blue-400 dark:via-indigo-300 dark:to-emerald-400">
+            <span className="block mt-1 sm:mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 dark:from-blue-400 dark:via-indigo-300 dark:to-emerald-400">
               हर बैच, हर बिल्टी, हर रुपये
             </span>{" "}
             का लाइव हिसाब।
@@ -86,7 +81,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal max-w-3xl mx-auto"
+            className="mt-4 sm:mt-6 text-sm sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal max-w-3xl mx-auto px-1 sm:px-0"
           >
             The high-throughput ERP operating system engineered specifically for
             FMCG Distributors, Super-Stockists & Godown Hubs. Stop expiry loss
@@ -100,11 +95,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4"
+            className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-md sm:max-w-none mx-auto"
           >
             <Link
               href="/admin"
-              className="px-7 py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/30 active:scale-95 transition-all inline-flex items-center gap-2.5 group border border-blue-400/30"
+              className="w-full sm:w-auto justify-center text-center px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/30 active:scale-95 transition-all inline-flex items-center gap-2.5 group border border-blue-400/30"
             >
               <span>Launch Live ERP Dashboard</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -112,7 +107,7 @@ export default function HeroSection() {
 
             <a
               href="#simulator"
-              className="px-6 py-4 rounded-xl text-sm sm:text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 shadow-sm transition-all inline-flex items-center gap-2"
+              className="w-full sm:w-auto justify-center text-center px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 shadow-sm transition-all inline-flex items-center gap-2"
             >
               <Zap className="w-4 h-4 text-amber-500" />
               <span>Try Live Order Sandbox</span>
@@ -120,27 +115,27 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Quick Demo Credential Pill */}
-          <div className="mt-4 text-[12px] text-slate-500 dark:text-slate-400 flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <div className="mt-3.5 sm:mt-4 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center gap-2 text-center px-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
             <span>
-              Super Admin preloaded • No password or sign-up needed • Live Data
+              Super Admin preloaded • No password needed • Live Data
             </span>
           </div>
         </div>
 
         {/* Real FMCG Brands Marquee */}
-        <div className="mt-14 pt-8 border-t border-slate-200 dark:border-slate-800/80">
-          <p className="text-center text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-4">
+        <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-slate-200 dark:border-slate-800/80">
+          <p className="text-center text-[10px] sm:text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold mb-3 sm:mb-4 px-2">
             Powers Super-Stockists & Depots Distributing Leading FMCG Brands
           </p>
-          <div className="relative overflow-hidden w-full [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <div className="animate-marquee gap-8 py-2">
+          <div className="relative overflow-hidden w-full [mask-image:_linear-gradient(to_right,transparent_0,_black_24px,_black_calc(100%-24px),transparent_100%)] sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <div className="animate-marquee gap-4 sm:gap-8 py-2">
               {[...FMCG_BRANDS, ...FMCG_BRANDS].map((brand, idx) => (
                 <div
                   key={idx}
-                  className="px-4 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium text-xs whitespace-nowrap flex items-center gap-2 shadow-xs"
+                  className="px-3 sm:px-4 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium text-xs whitespace-nowrap flex items-center gap-2 shadow-xs"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
                   {brand}
                 </div>
               ))}
@@ -153,27 +148,27 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.25 }}
-          className="mt-12 lg:mt-16"
+          className="mt-10 sm:mt-12 lg:mt-16"
         >
-          <div className="mx-auto max-w-5xl rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden">
+          <div className="mx-auto max-w-5xl rounded-2xl sm:rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden">
             {/* Window Header */}
-            <div className="bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2.5">
+            <div className="bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-3.5 sm:px-5 py-2.5 sm:py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div className="flex items-center gap-2 sm:gap-2.5">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-rose-500" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-500" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500" />
                 </div>
-                <span className="ml-2 text-xs font-mono font-semibold text-slate-600 dark:text-slate-400">
+                <span className="ml-1 sm:ml-2 text-[11px] sm:text-xs font-mono font-semibold text-slate-600 dark:text-slate-400 truncate">
                   vyavasthakendra.app/live-command-center
                 </span>
               </div>
 
               {/* Interactive Tabs inside Mockup */}
-              <div className="flex items-center gap-1 bg-slate-200/90 dark:bg-slate-900 p-1 rounded-xl border border-slate-300 dark:border-slate-800 overflow-x-auto max-w-full">
+              <div className="flex items-center gap-1 bg-slate-200/90 dark:bg-slate-900 p-1 rounded-xl border border-slate-300 dark:border-slate-800 overflow-x-auto max-w-full scrollbar-none w-full sm:w-auto">
                 <button
                   onClick={() => setActiveTab("twin")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     activeTab === "twin"
                       ? "bg-blue-600 text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
@@ -184,7 +179,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("fefo")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     activeTab === "fefo"
                       ? "bg-blue-600 text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
@@ -195,7 +190,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("van")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     activeTab === "van"
                       ? "bg-blue-600 text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
@@ -206,7 +201,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("credit")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     activeTab === "credit"
                       ? "bg-blue-600 text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
@@ -217,7 +212,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("invoice")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
                     activeTab === "invoice"
                       ? "bg-blue-600 text-white shadow-sm"
                       : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
@@ -233,7 +228,7 @@ export default function HeroSection() {
             <div className="bg-slate-50 dark:bg-slate-900/90">
               {/* TAB 0: Live Godown Twin (Real High-Res Warehouse Photography) */}
               {activeTab === "twin" && (
-                <div className="relative w-full h-[460px] sm:h-[500px] overflow-hidden group animate-in fade-in duration-300">
+                <div className="relative w-full h-[380px] sm:h-[500px] overflow-hidden group animate-in fade-in duration-300">
                   {/* High Definition Crystal Clear Warehouse Photo */}
                   <Image
                     src="/hero-warehouse.jpg"
@@ -247,11 +242,11 @@ export default function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/60 pointer-events-none" />
 
                   {/* Top Live Bar */}
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-950/80 border border-slate-700/80 backdrop-blur-md text-xs font-semibold shadow-lg">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>
-                        LIVE GODOWN DIGITAL TWIN • JAIPUR CENTRAL HUB (BAY 23)
+                  <div className="absolute top-2.5 sm:top-4 left-2.5 sm:left-4 right-2.5 sm:right-4 flex items-center justify-between text-white z-10">
+                    <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-slate-950/80 border border-slate-700/80 backdrop-blur-md text-[10px] sm:text-xs font-semibold shadow-lg">
+                      <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                      <span className="truncate">
+                        LIVE GODOWN DIGITAL TWIN • JAIPUR HUB
                       </span>
                     </div>
                     <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-950/80 border border-blue-500/40 backdrop-blur-md text-xs text-blue-300 font-semibold shadow-lg">
@@ -261,21 +256,21 @@ export default function HeroSection() {
 
                   {/* Floating Holographic Telemetry Cards placed on Warehouse Areas */}
                   {/* 1. Pallet Racks HUD Pin (Right) */}
-                  <div className="absolute top-20 right-4 sm:right-8 max-w-[270px] bg-slate-900/95 border border-slate-700/90 rounded-2xl p-3.5 text-white shadow-2xl backdrop-blur-md z-10">
-                    <div className="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
-                      <span>Aisle 41 • Bay 23 (FMCG)</span>
-                      <span className="px-1.5 py-0.5 rounded text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  <div className="absolute top-14 sm:top-20 right-2 sm:right-8 max-w-[200px] sm:max-w-[270px] bg-slate-900/95 border border-slate-700/90 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 text-white shadow-2xl backdrop-blur-md z-10">
+                    <div className="flex items-center justify-between text-[11px] sm:text-xs font-bold text-amber-400 mb-1">
+                      <span>Aisle 41 • Bay 23</span>
+                      <span className="px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30">
                         FEFO LOCK
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-300 leading-snug">
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 leading-snug">
                       Lot #PARLE-2026-B1 (18 Days Left). System locked for first
-                      dispatch, preventing expiry loss.
+                      dispatch.
                     </p>
                   </div>
 
-                  {/* 2. Dispatch Floor HUD Pin (Bottom Left) */}
-                  <div className="absolute bottom-20 left-4 sm:left-8 max-w-[270px] bg-slate-900/95 border border-slate-700/90 rounded-2xl p-3.5 text-white shadow-2xl backdrop-blur-md z-10">
+                  {/* 2. Dispatch Floor HUD Pin (Bottom Left - Hidden on small mobile to avoid cluttering) */}
+                  <div className="hidden sm:block absolute bottom-20 left-4 sm:left-8 max-w-[270px] bg-slate-900/95 border border-slate-700/90 rounded-2xl p-3.5 text-white shadow-2xl backdrop-blur-md z-10">
                     <div className="flex items-center justify-between text-xs font-bold text-emerald-400 mb-1">
                       <span>Dispatch Lane 02</span>
                       <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
@@ -289,22 +284,22 @@ export default function HeroSection() {
                   </div>
 
                   {/* Bottom Live Metrics Bar inside Image */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-slate-950/90 border border-slate-800/90 backdrop-blur-md flex flex-wrap items-center justify-between gap-3 text-xs text-white z-10">
-                    <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                  <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-950/90 border border-slate-800/90 backdrop-blur-md flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3 text-xs text-white z-10">
+                    <div className="flex items-center justify-between sm:justify-start gap-4 sm:gap-6">
                       <div>
-                        <span className="text-[10px] text-slate-400 block font-medium">
+                        <span className="text-[9px] sm:text-[10px] text-slate-400 block font-medium">
                           Live Inventory Value
                         </span>
-                        <span className="text-sm font-black text-emerald-400 font-mono">
+                        <span className="text-xs sm:text-sm font-black text-emerald-400 font-mono">
                           ₹1,42,80,000
                         </span>
                       </div>
-                      <div className="hidden sm:block border-l border-slate-800 pl-4">
-                        <span className="text-[10px] text-slate-400 block font-medium">
+                      <div className="border-l border-slate-800 pl-3 sm:pl-4">
+                        <span className="text-[9px] sm:text-[10px] text-slate-400 block font-medium">
                           Monitored Lots
                         </span>
-                        <span className="text-sm font-bold text-white font-mono">
-                          84 Active Batches
+                        <span className="text-xs sm:text-sm font-bold text-white font-mono">
+                          84 Batches
                         </span>
                       </div>
                       <div className="hidden md:block border-l border-slate-800 pl-4">
@@ -317,10 +312,10 @@ export default function HeroSection() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center">
                       <button
                         onClick={() => setActiveTab("fefo")}
-                        className="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md"
+                        className="w-full sm:w-auto justify-center px-3 sm:px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md"
                       >
                         <span>Simulate FEFO Order</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -332,8 +327,8 @@ export default function HeroSection() {
 
               {/* TAB 1: FEFO Expiry Radar */}
               {activeTab === "fefo" && (
-                <div className="p-5 sm:p-7 space-y-5 animate-in fade-in duration-200">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white dark:bg-slate-950/70 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+                <div className="p-4 sm:p-7 space-y-4 sm:space-y-5 animate-in fade-in duration-200">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white dark:bg-slate-950/70 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-500/30">
@@ -343,14 +338,14 @@ export default function HeroSection() {
                           Jaipur Central Godown
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-slate-900 dark:text-white mt-1">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1">
                         Zero Expiry Waste: Nearest-to-expire lots auto-allocated
                         first
                       </h3>
                     </div>
                     <button
                       onClick={() => setFefoSimulated(!fefoSimulated)}
-                      className="px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition-all inline-flex items-center gap-2 self-start sm:self-auto shrink-0 shadow-sm"
+                      className="w-full sm:w-auto justify-center px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition-all inline-flex items-center gap-2 self-start sm:self-auto shrink-0 shadow-sm"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                       <span>
@@ -451,9 +446,9 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="p-3 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/50 rounded-xl flex items-center justify-between text-xs text-blue-900 dark:text-blue-200">
+                  <div className="p-3 bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/50 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 text-xs text-blue-900 dark:text-blue-200">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                       <span>
                         Distributor Saved: ₹3,40,000 in expired returns last
                         quarter using automated FEFO locks.
@@ -461,7 +456,7 @@ export default function HeroSection() {
                     </div>
                     <Link
                       href="/admin/inventory"
-                      className="text-blue-600 dark:text-blue-400 hover:underline font-bold text-[11px]"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-bold text-[11px] shrink-0"
                     >
                       View Full Inventory Batches →
                     </Link>
@@ -471,8 +466,8 @@ export default function HeroSection() {
 
               {/* TAB 2: Van Route Dispatch */}
               {activeTab === "van" && (
-                <div className="space-y-5 animate-in fade-in duration-200">
-                  <div className="bg-white dark:bg-slate-950/70 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="p-4 sm:p-7 space-y-4 sm:space-y-5 animate-in fade-in duration-200">
+                  <div className="bg-white dark:bg-slate-950/70 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30">
@@ -482,15 +477,15 @@ export default function HeroSection() {
                           Route: Tonk Road & Malviya Nagar
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-slate-900 dark:text-white mt-1">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1">
                         Vehicle RJ-14-GA-9021 • Driver: Ramesh Singh
                       </h3>
                     </div>
                     <div className="sm:text-right">
-                      <span className="text-[11px] text-slate-500 dark:text-slate-400 block">
+                      <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 block">
                         Today&apos;s Route Collection
                       </span>
-                      <span className="text-lg font-black text-emerald-600 dark:text-emerald-400">
+                      <span className="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400">
                         ₹3,84,500
                       </span>
                     </div>
@@ -501,7 +496,7 @@ export default function HeroSection() {
                       <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                         Drop Points Completed
                       </span>
-                      <div className="mt-1 text-xl font-black text-slate-900 dark:text-white">
+                      <div className="mt-1 text-lg sm:text-xl font-black text-slate-900 dark:text-white">
                         22 / 28 Shops
                       </div>
                       <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-2 overflow-hidden">
@@ -512,7 +507,7 @@ export default function HeroSection() {
                       <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                         Van Stock Value
                       </span>
-                      <div className="mt-1 text-xl font-black text-slate-900 dark:text-white">
+                      <div className="mt-1 text-lg sm:text-xl font-black text-slate-900 dark:text-white">
                         ₹5,20,000
                       </div>
                       <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">
@@ -523,7 +518,7 @@ export default function HeroSection() {
                       <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                         Spot Cash + UPI
                       </span>
-                      <div className="mt-1 text-xl font-black text-emerald-600 dark:text-emerald-400">
+                      <div className="mt-1 text-lg sm:text-xl font-black text-emerald-600 dark:text-emerald-400">
                         ₹2,10,000 Collected
                       </div>
                       <span className="text-[10px] text-slate-500 dark:text-slate-400">
@@ -532,9 +527,9 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between p-3.5 bg-white dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs text-xs">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-3.5 bg-white dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs text-xs gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold shrink-0">
                         POS
                       </div>
                       <div>
@@ -549,7 +544,7 @@ export default function HeroSection() {
                     </div>
                     <Link
                       href="/admin/deliveries"
-                      className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-xs"
+                      className="w-full sm:w-auto text-center px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow-xs shrink-0"
                     >
                       Inspect Fleet Dispatch
                     </Link>
@@ -559,8 +554,8 @@ export default function HeroSection() {
 
               {/* TAB 3: Retailer Credit Radar */}
               {activeTab === "credit" && (
-                <div className="space-y-5 animate-in fade-in duration-200">
-                  <div className="bg-white dark:bg-slate-950/70 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="p-4 sm:p-7 space-y-4 sm:space-y-5 animate-in fade-in duration-200">
+                  <div className="bg-white dark:bg-slate-950/70 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-500/20 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-500/30">
@@ -570,7 +565,7 @@ export default function HeroSection() {
                           Retailer Master Check
                         </span>
                       </div>
-                      <h3 className="text-base font-bold text-slate-900 dark:text-white mt-1">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1">
                         Sharma General Store (Bapu Nagar) • GSTIN:
                         08AALPS9021K1Z2
                       </h3>
@@ -579,7 +574,7 @@ export default function HeroSection() {
                       onClick={() =>
                         setCreditAlertTriggered(!creditAlertTriggered)
                       }
-                      className="px-3.5 py-2 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white transition-all inline-flex items-center gap-2 self-start sm:self-auto shadow-sm"
+                      className="w-full sm:w-auto justify-center px-3.5 py-2 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white transition-all inline-flex items-center gap-2 self-start sm:self-auto shadow-sm shrink-0"
                     >
                       <AlertTriangle className="w-3.5 h-3.5" />
                       <span>
@@ -590,7 +585,7 @@ export default function HeroSection() {
                     </button>
                   </div>
 
-                  <div className="p-4 bg-white dark:bg-slate-950/90 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+                  <div className="p-3.5 sm:p-4 bg-white dark:bg-slate-950/90 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-slate-500 dark:text-slate-400">
                         Assigned Credit Limit:
@@ -636,7 +631,7 @@ export default function HeroSection() {
                     )}
                   </div>
 
-                  <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
                     <span>Average DSO (Days Sales Outstanding): 12.4 Days</span>
                     <Link
                       href="/admin/receivables"
@@ -650,13 +645,13 @@ export default function HeroSection() {
 
               {/* TAB 4: Thermal GST Slip */}
               {activeTab === "invoice" && (
-                <div className="space-y-4 animate-in fade-in duration-200">
+                <div className="p-4 sm:p-7 space-y-4 animate-in fade-in duration-200">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
                     <div className="space-y-3">
                       <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30">
                         INSTANT GST BILLING
                       </span>
-                      <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
                         Standard A4 Invoices & 3-Inch Counter Slips
                       </h3>
                       <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -665,10 +660,10 @@ export default function HeroSection() {
                         directly to retail shopkeeper.
                       </p>
 
-                      <div className="pt-2 flex items-center gap-3">
+                      <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                         <button
                           onClick={() => setThermalPrinted(!thermalPrinted)}
-                          className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-2 shadow-sm"
+                          className="w-full sm:w-auto justify-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-2 shadow-sm"
                         >
                           <Printer className="w-3.5 h-3.5" />
                           <span>
@@ -679,7 +674,7 @@ export default function HeroSection() {
                         </button>
                         <Link
                           href="/admin/invoices"
-                          className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:underline"
+                          className="w-full sm:w-auto text-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:underline py-1.5"
                         >
                           View Invoices Dashboard →
                         </Link>
